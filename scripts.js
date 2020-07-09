@@ -37,19 +37,12 @@ function validate() {
   $("#sid").keyup(function() {
 
     var sid = $("#sid").val();
-    if(validateSID(sid)){
+    if(validateSID(sid) && (sid.length == 9)){
       $("#checkSID").text(sid + " is valid");
       $("#checkSID").css("color", "green");
     } else {
       $("#checkSID").text(sid + " is not valid");
       $("#checkSID").css("color", "red");
-    }
-    if(sid.length != 9){
-      $("#checkSID").text(sid + " is not valid");
-      $("#checkSID").css("color", "red");
-    } else {
-      $("#checkSID").text(sid + " is valid");
-      $("#checkSID").css("color", "green");
     }
   });
 
