@@ -29,18 +29,18 @@
         <form name="proj1" onsubmit="return validateForm()" method="POST">
           <!-- name section -->
           <label for="name">Full Name: </label>
-          <span class='message'></span>
+          <span id='error'></span>
           <input type="text" placeholder="John Doe" name="name" id="name" required>
           <!-- email section -->
-          <span class='checkEmail'></span>
           <label for="email">Email:</label>
+          <span id='checkEmail'></span>
           <input type="email" placeholder="example@email.com" name="email" id="email" required>
           <!-- password section -->
-          <span class='message'></span>
           <label for="sid">Student ID:</label>
+          <span id='checkSID'></span>
           <input type="text" name="sid" id="sid" min="9" max="9" required>
 
-          <button id="validateBtn" type="submit">Submit</button>
+          <button id="validateBtn" type="submit" value="submit">Submit</button>
         </form>
       </div>
       <div class="col s3">
