@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- API's and Front-end libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>JavaScript Validations</title>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <div class="row">
+      <h3>Group Project 1 - JavaScript Validation</h3>
+      <h6 class="right-align">Chris, Kerk, Hussein, Pierre</h6>
+      <hr>
+      <!-- <p class="center"><a href="/">Introduction</a> | <a href="#">Tutorial</a> | <a href="/hello">"Hello World!"</a></p> -->
+    </div>
+    <div class="row">
+      <div class="col s3">
+
+      </div>
+      <div class="col s6">
+        <form name="proj1" onsubmit="return validateForm()" method="POST">
+          <!-- name section -->
+          <label for="name">Full Name: </label>
+          <span class='message'></span>
+          <input type="text" placeholder="John Doe" name="name" id="name" required>
+          <!-- email section -->
+          <span class='checkEmail'></span>
+          <label for="email">Email:</label>
+          <input type="email" placeholder="example@email.com" name="email" id="email" required>
+          <!-- password section -->
+          <span class='message'></span>
+          <label for="sid">Student ID:</label>
+          <input type="text" name="sid" id="sid" min="9" max="9" required>
+
+          <button id="validateBtn" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="col s3">
+
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
