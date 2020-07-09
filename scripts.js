@@ -15,9 +15,10 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+// Number Validate function
 function validateSID(sid){
-  var numbers = /^[-+]?[0-9]+$/;
-  return numbers.test(sid);
+  var re = /^[-+]?[0-9]+$/;
+  return re.test(sid);
 }
 
 function validate() {
@@ -37,10 +38,10 @@ function validate() {
 
     var sid = $("#sid").val();
     if(validateSID(sid)){
-      $("checkSID").text(sid + " is valid");
+      $("#checkSID").text(sid + " is valid");
       $("#checkSID").css("color", "green");
     } else {
-      $("checkSID").text(sid + " is not valid");
+      $("#checkSID").text(sid + " is not valid");
       $("#checkSID").css("color", "red");
     }
   });
@@ -48,9 +49,9 @@ function validate() {
  //UPDATE ON KEYUP
 $(document).ready(function() {
   $("#checkEmail").keyup(validate);
-  // $("#checkName").keyup(validate);
   $("#checkSID").keyup(validate);
 });
+
 }
 
 validate();
